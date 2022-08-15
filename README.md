@@ -11,4 +11,7 @@ implementation of n-puzzle game
     - if goal is matched return
     - else check Q for next state for exploration 
 
+# Steps to run this code
+
+
 
