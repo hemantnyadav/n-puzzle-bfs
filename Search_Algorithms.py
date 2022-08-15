@@ -5,7 +5,7 @@ from queue import LifoQueue
 
 #Breadth-first Search
 def BFS(initial_state , n):
-    root = State(initial_state,0)
+    root = State(initial_state,None, None, 0, 0)
     if root.test():
         return root.solution()
     frontier = Queue()  #Queue of states to be verified for solution and explored
@@ -15,7 +15,7 @@ def BFS(initial_state , n):
     while not(frontier.empty()):
         current_node = frontier.get()
         explored.append(current_node.state)
-        
+        print(current_node.state)
         children = current_node.expand(n)
         for child in children:
             if child.state not in explored:

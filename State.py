@@ -3,12 +3,20 @@ class State:
     #this should be changed manually based on n 
     #e.g. it should be [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0] if n is 4.
     
-    def __init__(self, state,depth):
+    def __init__(self, state, parent, direction, depth, cost):
         self.state = state
+        self.parent = parent
+        self.direction = direction
         self.depth = depth
 
+        if parent:
+            self.cost = parent.cost + cost
+
+        else:
+            self.cost = cost
+
     #this would remove illegal moves for a given state
-    def available_moves(x,n): 
+    def available_moves(self, x,n): 
         moves = ['Left', 'Right', 'Up', 'Down']
         if x % n == 0:
             moves.remove('Left')

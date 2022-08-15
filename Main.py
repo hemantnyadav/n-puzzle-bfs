@@ -10,9 +10,9 @@ print("The given state is:", root)
 
 def inv_num(puzzle):
     inv_count = 0
-    for i in range(len(puzzle-1)):
+    for i in range(len(puzzle)-1):
         for j in range(i+1,len(puzzle)):
-            if((puzzle(i)>puzzle(j)) and puzzle(i) and puzzle(j)):
+            if((puzzle[i]>puzzle[j]) and puzzle[i] and puzzle[j]):
                 inv_count+=1
 
     return inv_count
