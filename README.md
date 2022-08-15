@@ -1,7 +1,7 @@
 # n-puzzle-bfs
 Implementation of n-puzzle game
 
-Note: [Link here] (http://cs.tru.ca/~mlee/comp2680/Software/board_game.html) is a good reference for practice:
+Note: [Link here](http://cs.tru.ca/~mlee/comp2680/Software/board_game.html) is a good reference for practice:
 
 1. Input initial state as list L
 2. Check if given L it is solvalbe
