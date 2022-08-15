@@ -3,8 +3,9 @@ class State:
     #this should be changed manually based on n 
     #e.g. it should be [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0] if n is 4.
     
-    def __init__(self, state):
+    def __init__(self, state,depth):
         self.state = state
+        self.depth = depth
 
     #this would remove illegal moves for a given state
     def available_moves(x,n): 
@@ -36,10 +37,13 @@ class State:
                 temp[x], temp[x - n] = temp[x - n], temp[x]
             elif direction == 'Down':
                 temp[x], temp[x + n] = temp[x + n], temp[x]
-              
+            
             children.append(State(temp, self, direction, self.depth + 1, 1)) #depth should be changed as children are produced
 
         return children
     
-
+    def test(self): #check if the given state is goal
+        if self.state == self.goal:
+            return True
+        return False
      
