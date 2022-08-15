@@ -54,4 +54,15 @@ class State:
         if self.state == self.goal:
             return True
         return False
-     
+    
+    #gets the given state and returns it's direction + it's parent's direction till there is no parent
+    def solution(self):
+        solution = []
+        solution.append(self.direction)
+        path = self
+        while path.parent != None:
+            path = path.parent
+            solution.append(path.direction)
+        solution = solution[:-1]
+        solution.reverse()
+        return solution
