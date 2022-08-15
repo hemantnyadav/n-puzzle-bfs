@@ -1,6 +1,8 @@
 # n-puzzle-bfs
-implementation of n-puzzle game
+Implementation of n-puzzle game
 
+Note: Link here is a good reference for practice:
+[Link text Here](http://cs.tru.ca/~mlee/comp2680/Software/board_game.html)
 1. Input initial state as list L
 2. Check if given L it is solvalbe
     - This can be done using "number of inversions should be even"
